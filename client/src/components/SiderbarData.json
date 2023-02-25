@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Login",
+    "icon": "bx bx-buildings",
+    "path": "/login"
+  },
+  {
+    "title": "Organization Profile",
+    "icon": "bx bx-buildings",
+    "path": "/"
+  },
+  {
+    "title": "User",
+    "icon": "bx bx-user-circle",
+    "path": "/user"
+  }
+]
