@@ -1,6 +1,6 @@
 This project was Chakra UI with React JS
 
-## Available Scripts
+## Inventory App with Chakra UI & React JS
 
 In the project directory, you can run:
 
