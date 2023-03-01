@@ -1,0 +1,87 @@
+ <Box padding={5}>
+        <Select
+          value={selectedOption}
+          onChange={e => setSelectedOption(e.target.value)}
+          size="sm"
+          width="fit-content"
+          isRequired
+          defaultValue={1}
+        >
+          {luser.map((todo, index) => {
+            return (
+              <>
+                <option key={index} value={todo.uid}>
+                  {todo.username}
+                </option>
+              </>
+            );
+          })}
+        </Select>
+      </Box>
+      <Box padding={5}>
+        <RadioGroup
+          value={radioOption}
+          onChange={setRadioOption}
+          className="radiobtn"
+        >
+          {user.map(users => {
+            return (
+              <div>
+                <Radio
+                  key={users.displayid}
+                  value={users.displayname}
+                  size="sm"
+                >
+                  {users.displayname}
+                </Radio>
+              </div>
+            );
+          })}
+        </RadioGroup>
+      </Box>
+
+<Select
+        value={selectedOption}
+        onChange={e => setSelectedOption(e.target.value)}
+        size="sm"
+        width="fit-content"
+        isRequired
+      >
+        <option>Select the state</option>
+        {luser.map((todo, index) => {
+          return (
+            <>
+              <option key={index} value={todo.uid}>
+                {todo.username}
+              </option>
+            </>
+          );
+        })}
+      </Select>
+
+      <TableContainer>
+        <Table variant="simple" size="sm" width="fit-content">
+          <TableCaption>Imperial to metric conversion factors</TableCaption>
+          <Thead>
+            <Tr>
+              <Th>displayname</Th>
+              <Th>productcode</Th>
+              <Th>productstatus</Th>
+              <Th isNumeric>userid</Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            {user.map((todo, index) => {
+              return (
+                <Tr key={index}>
+                  <Td>{todo.displayid}</Td>
+                  <Td>{todo.displayname}</Td>
+                  <Td>{todo.productcode}</Td>
+                  <Td>{todo.productstatus}</Td>
+                  <Td>{todo.uid}</Td>
+                </Tr>
+              );
+            })}
+          </Tbody>
+        </Table>
+      </TableContainer>
